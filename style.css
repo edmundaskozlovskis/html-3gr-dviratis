@@ -2,7 +2,62 @@
     width: 1200px;
     margin: 0px auto;
 }
-.row {
+.nav .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.row {
+    display: flex;
+}
+.col {
+    width: 50%;
+}
+.header-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.header-menu ul a, .header-block a {
+    border: solid 2px black;
+    padding: 10px 24px;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 4px;
+    display: block;
+    transition: .4s;
+}
+.header-menu ul a:hover, .header-block a:hover {
+    color: white;
+    border-color: brown;
+    background-color: brown;
+    transform: scale(1.08);
+}
+.header-menu ul a:active, .header-block a:active {
+    color: blue;
+    border-color: blue;
+}
+.header-block h1 {
+    font-size: 52px;
+    font-weight: 700;
+}
+.header-block h2 {
+    color: silver;
+}
+.header-block p {
+    padding-right: 36px;
+}
+.header-block .col div {
+    margin-top: 36px;
+}
+.header-block a {
+    display: inline;
+}
+.header-block .col:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

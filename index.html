@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pagrindinis puslapis - E-dviratis</title>
-<link rel="stylesheet" href="style.css">
+    <title>Pagrindinis puslapis - E-dviratis</title>
+    <style>
+        .mySlides {display:none;}
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <a href="#">
-            <img width="120" src="https://edmundaskozlovskis.github.io/remote-lesson-1/images/istockphoto-854733622-612x612.jpg" alt="Logo paveikslelis">
-        </a>
-        <ul>
-            <li><a href="#">Header Block</a></li>
-            <li><a href="#">Info</a></li>
-            <li><a href="#">Characteristic</a></li>
-            <li><a href="#">Form</a></li>
-        </ul>
+    <div class="container">
+        <div class="nav">
+            <div class="row">
+                <a href="#">
+                    <img width="120" src="https://edmundaskozlovskis.github.io/remote-lesson-1/images/istockphoto-854733622-612x612.jpg" alt="Logo paveikslelis">
+                </a>
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="#">Header Block</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Characteristic</a></li>
+                        <li><a href="#">Form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-block">
+            <div class="row">
+                <div class="col">
+                    <h1>This is a heading</h1>
+                    <h2>This is a h2 element</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus, animi debitis, perferendis illum autem, repudiandae incidunt hic cum similique consectetur quia vitae ipsam provident excepturi labore magni. Tenetur, deleniti.</p>
+                    <div>
+                        <a href="#">Čia nuoroda</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="w3-content w3-display-container">
+                        <img class="mySlides" src="images/img_snowtops.jpg" style="width:100%">
+                        <img class="mySlides" src="images/img_lights.jpg" style="width:100%">
+                        <img class="mySlides" src="images/img_mountains.jpg" style="width:100%">
+                        <img class="mySlides" src="images/img_forest.jpg" style="width:100%">
+                      
+                        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="row">
+                <div class="col">
+                    <img src="https://res.cloudinary.com/dc2u2hjhz/image/upload/w_566,h_566/v1621712847/Hyper-Bicycle-Men-s-29-Explorer-Mountain-Bike-Hard-Tail-Blue_3e93bdb8-f247-4ae2-898a-e03fe12a5472.c6b499258d504157384035a890ee022e_mqqjbj.webp" alt="Info image">
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>
 </body>
 </html>
