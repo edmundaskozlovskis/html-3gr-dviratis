@@ -6,6 +6,7 @@
         .mySlides {display:none;}
     </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -15,12 +16,17 @@
             <a href="#">
                 <img width="120" src="https://img.freepik.com/free-vector/bicycle-logo-template-design_23-2150332110.jpg" alt="Logo paveikslėlis">
             </a>
-            <ul class="header-menu">
-                <li><a href="#">Header Block</a></li>
-                <li><a href="#info-block">Info</a></li>
-                <li><a href="#characteristic-block">Characteristic</a></li>
-                <li><a href="#form-block">Form</a></li>
-            </ul>
+            <div class="topnav" id="myTopnav">
+                <ul class="header-menu">
+                    <li><a href="#">Header Block</a></li>
+                    <li><a href="#info-block">Info</a></li>
+                    <li><a href="#characteristic-block">Characteristic</a></li>
+                    <li><a href="#form-block">Form</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
         <div class="row" id="header-block">
             <div class="col">
@@ -223,6 +229,15 @@
             x[i].style.display = "none";  
         }
         x[slideIndex-1].style.display = "block";  
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
     </script>
 </body>

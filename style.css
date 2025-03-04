@@ -45,6 +45,9 @@ html {
     background-color: white;
     top: 0;
 }
+#nav-block .icon {
+    display: none;
+}
 #header-block {
     gap: 30px;
     margin-top: 160px;
@@ -156,7 +159,7 @@ html {
     display: none;
 }
 #form-block .form-bike img {
-    width: 520px;
+    max-width: 520px;
 }
 #form-block .form-bike p {
     position: absolute;
@@ -183,12 +186,79 @@ html {
     #nav-block {
     width: 100%;
    }
+   #info-block img {
+    width: 100%;
+   }
 }
 @media only screen and (max-width: 760px) {
+    #nav-block {
+        display: flex;
+        flex-direction: row;
+    }
+    #nav-block .header-menu {
+        display: none;
+    }
+    #nav-block .responsive {
+        position: relative;
+    }
+    #nav-block .responsive ul{
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: white;
+    }
+    #nav-block .responsive ul a {
+        display: block;
+    }
+    #nav-block .icon {
+        display: block;
+    }
+    #nav-block .responsive .icon {
+        position: absolute;
+        top: -10px;
+        right: 0;
+    }
     .row {
         flex-direction: column;
     }
     .col {
         width: 100%;
+    }
+    #info-block {
+        padding-top: 70px;
+    }
+    #characteristic-block .col:last-child {
+        position: static;
+        height: auto;
+        overflow: auto;
+    }
+    #characteristic-block .col img {
+        position: static;
+        width: 100%;
+    }
+    #form-block form {
+        width: 100%;
+        height: 515px;
+    }
+    #form-block .form-block-inner {
+        position: static;
+    }
+    #form-block .form-label-box {
+        position: relative;
+    }
+    #form-block .form-bike img {
+        width: 100%;
+    }
+    #form-block .form-bike {
+        left: 0;
+        top: 18px;
+    }
+    #footer .row {
+        gap: 20px;
+    }
+    #footer .social-block a:first-child,
+    #footer .phone-email-block a:first-child {
+        margin-right: 20px;
     }
 }
